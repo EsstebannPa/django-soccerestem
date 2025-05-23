@@ -1,0 +1,696 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoccerEstem!</title>
+
+    <link rel="shortcut icon" href="{%static 'image/IconoFut.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="header-1">
+
+        <a href="#" class="logo"> <img src="{%static 'image/Fifa.png' %}" class="logo" alt="logoFifa" ></a>
+        <!-- <a href="#" class="logo"> <i class="fas fa-book"></i> si </a> -->
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="Buscar..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="{% url 'login2' %}" class="fas fa-user"></a>
+        
+        </div>
+
+    </div>
+
+
+
+</header>
+
+<!-- header section ends -->
+
+<!-- bottom navbar  -->
+
+<nav class="bottom-navbar">
+    <a href="#home" class="fas fa-home"></a>
+    <a href="#featured" class="fas fa-list"></a>
+    <a href="#arrivals" class="fas fa-tags"></a>
+    <a href="#reviews" class="fas fa-comments"></a>
+    <a href="#blogs" class="fas fa-blog"></a>
+</nav>
+
+<!-- login form  -->
+
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>El juego es tuyo!</h3>
+            <p>Con SoccerEstem, tendrás la posibilidad de obtener todo el conocimiento posible 
+                respecto al Mundial de la FIFA 2026, el cual se llevará a cabo en Mexico, EE.UU & Canadá. </p>
+
+            <p>
+                Aquí podrás 
+                encontrar datos detallados a cerca de jugadores, directores técnicos y formaciones
+                preliminares!
+            </p>
+            <a href="#featured" class="btn">COMENZAR</a>
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide">
+                    <img src="{% static 'image/Copa.jpg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ense  -->
+
+<!-- icons section starts  -->
+
+
+
+<!-- icons section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Elige el equipo a visualizar</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/Paises.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>MÁS EQUIPOS...</h3>
+                    <div class="price"><span></span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanPortugal.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>PORTUGAL</h3>
+                    <div class="price">DT: <span>Roberto Martínez</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanColombia.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>COLOMBIA</h3>
+                    <div class="price">DT: <span>Reinaldo Rueda</span></div>
+                    {% comment %} <a href="{% url 'infoequipos' %}" class="btn">Ver</a> {% endcomment %}
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanArgentina.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>ARGENTINA</h3>
+                    <div class="price">DT: <span>Lionel Scaloni</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanBrazil.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>BRASIL</h3>
+                    <div class="price">DT: <span>Dorival Júnior</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanCroacia.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>CROACIA</h3>
+                    <div class="price">DT: <span>Roberto Martínez</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanAlemania.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>ALEMANIA</h3>
+                    <div class="price">DT: <span>Julian Nagelsmann</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanEspaña.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>ESPAÑA</h3>
+                    <div class="price">DT: <span>Luis de la Fuente </span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanUruguay.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>URUGUAY</h3>
+                    <div class="price">DT: <span>Marcelo Bielsa</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanEcuador.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>ECUADOR</h3>
+                    <div class="price">DT: <span>Felix Sánchez Bas</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'image/BanFrancia.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>FRANCIA</h3>
+                    <div class="price">DT: <span>Didier Claude Deschamps</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <!-- <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>featured books</h3>
+                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <a href="#" class="btn">Ver</a>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- newsletter section ends -->
+
+<!-- arrivals section starts  -->
+
+
+<!-- arrivals section ends -->
+
+<!-- deal section starts  -->
+
+
+
+
+
+<!-- <section class="deal">
+
+    <div class="content">
+        <h3>deal of the day</h3>
+        <h1>upto 50% off</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora quaerat at fuga dolorum natus velit.</p>
+        <a href="#" class="btn">shop now</a>
+    </div>
+
+    <div class="image">
+        <img src="image/deal-img.jpg" alt="">
+    </div>
+
+</section> -->
+
+
+
+
+
+
+<!-- deal section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading"> <span>Jugadores del momento</span> </h1>
+
+    <div class="swiper reviews-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Haaland.png'%}" alt="">
+                <h3>Erling Haaland</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Messi.jpg'%}" alt="">
+                <h3>Leo Messi</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Vinicius.jpg'%}" alt="">
+                <h3>Vinicius Junior</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Mbappe.jpg'%}" alt="">
+                <h3>Kylian Mbappé</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/DeBruyne.jpg'%}" alt="">
+                <h3>Kevin De Bruyne</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Cr7.jpg'%}" alt="">
+                <h3>Cristiano Ronaldo 🇵🇹</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Rodri.jpg'%}" alt="">
+                <h3>Rodri Hernández</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Griezmann.jpg'%}" alt="">
+                <h3>Antonie Griezmann</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Osimhen.jpg'%}" alt="">
+                <h3>Victor Osimhen </h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Gundogan.jpg'%}" alt="">
+                <h3>Ilkay Gündoğan </h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Robert.jpg'%}" alt="">
+                <h3>Robert Lewandowski</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Courtois.jpg'%}" alt="">
+                <h3>Thibaut Courtois</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="{% static 'image/Jude.jpg'%}" alt="">
+                <h3>Jude Bellingham</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- reviews section ends -->
+
+<!-- blogs section starts  -->
+
+
+
+<!-- blogs section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+
+        <div class="box">
+            <h3>Contacto</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +57 XXX XXX XXXX </a>
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> estebandidox@gmail.com </a>
+        </div>
+        
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="credit">Copyright © 1994 - 2024 FIFA. Todos los derechos reservados.</div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- loader  -->
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

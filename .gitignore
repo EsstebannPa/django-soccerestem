@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuración específica de Django
+db.sqlite3
+media/media
+staticfiles/
+.env
+
+# Dependencias del virtualenv
+env/

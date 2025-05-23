@@ -1,0 +1,48 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block tecnicoscontent %}
+
+{% comment %} <img src="{% static 'image/Cr7.jpg' %}" class="rounded mx-auto d-block" alt=""> {% endcomment %}
+{% comment %} <img src="{% static 'image/Cr7.jpg' %}" alt=""> {% endcomment %}
+<h1>Hola</h1>
+<table class="table mb-0">
+    <thead class="table-dark">
+      <tr class="col-md-6">
+        <th scope="col" class="h2">IDJugador</th>
+        <th scope="col" class="h2">NombreJug</th>
+        <th scope="col" class="h2">ApellidoJug</th>
+        <th scope="col" class="h2">Dorsal</th>
+        <th scope="col" class="h2">Información</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for j in tecnicos %}  
+      <tr>
+        <th scope="row" class="h3">{{ j.id_tecnico }}</th>
+        <td class="h3">{{ j.nom_tec }}</td>
+        <td class="h3">{{ j.apll_tec }}</td>
+        <td class="h3">{{ j.fecha_nac_tec }}</td>
+        <td><button type="button" class="btn">Ver</button></td>
+      </tr>
+    {% endfor %}  
+
+{% comment %}       <tr>
+        <th scope="row" class="h3">2</th>
+        <td class="h3">Jacob</td>
+        <td class="h3">Thornton</td>
+        <td class="h3">@fat</td>
+      </tr>
+      <tr>
+        <th scope="row" class="h3">3</th>
+        <td colspan="2" class="h3">Larry the Bird</td>
+        <td class="h3">@twitter</td>
+      </tr> {% endcomment %}
+    </tbody>
+  </table>
+
+{% endblock %}
+
+
+
+

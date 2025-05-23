@@ -1,0 +1,168 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+
+{% block escudo %}
+
+  <a class="swiper-slide"><img src="{{ equipo.esc_equipo.url }}" alt="Escudo Equipo" /></a>
+
+{% endblock %}
+
+
+{% block title %}
+
+  <h3>{{ equipo }}</h3>
+  
+{% endblock %}
+
+
+{% block des %}
+  <h2>{{ equipo.des_equipo }}</h2>
+  <br>
+{% endblock %}
+
+
+{% block jugadorescontent %}
+
+{% comment %} <img src="{% static 'image/Cr7.jpg' %}" class="rounded mx-auto d-block" alt=""> {% endcomment %}
+{% comment %} <img src="{% static 'image/Cr7.jpg' %}" alt=""> {% endcomment %}
+
+<table class="table border text-center">
+    <thead class="table-dark">
+      <tr class="col-md-6">
+        {% comment %} <th scope="col" class="h2">IDJugador</th> {% endcomment %}
+        <th scope="col" class="h2">NombreJug</th>
+        <th scope="col" class="h2">ApellidoJug</th>
+        <th scope="col" class="h2">Dorsal</th>
+        <th scope="col" class="h2">FecNacimiento</th>
+        <th scope="col" class="h2">Posición</th>
+        <th scope="col" class="h2">Titular</th>
+        <th scope="col" class="h2">Equipo</th>
+        <th scope="col" class="h2">Imagen</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      
+
+    {% for j in jugadores %}  
+      <tr>
+        {% comment %} <th scope="row" class="h3">{{ j.id_jugador }}</th> {% endcomment %}
+        <th scope="row" class="h3"><br>{{ j.nom_jug }}</th>
+        <td class="h3"><br>{{ j.apll_jug }}</td>
+        <td class="h3"><br>{{ j.num_cams }}</td>
+        <td class="h3"><br>{{ j.fecha_nac_jug }}</td>
+        <td class="h3"><br>{{ j.id_posicion }}</td>
+        <td class="h3"><br>{{ j.titular }}</td>
+        <td class="h3"><br>{{ j.id_equipo }}</td>
+        <td class="h3"><img src="{{ j.foto_jug.url }}" class="img-thumbnail" alt="Foto jugador"></td>
+      </tr>
+    {% endfor %}  
+
+{% comment %}       <tr>
+        <th scope="row" class="h3">2</th>
+        <td class="h3">Jacob</td>
+        <td class="h3">Thornton</td>
+        <td class="h3">@fat</td>
+      </tr>
+      <tr>
+        <th scope="row" class="h3">3</th>
+        <td colspan="2" class="h3">Larry the Bird</td>
+        <td class="h3">@twitter</td>
+      </tr> {% endcomment %}
+    </tbody>
+  </table>
+
+{% endblock %}
+
+
+{% block tecnicoscontent %}
+
+<table class="table border text-center">
+  <thead class="table-dark">
+    <tr class="col-md-6">
+      {% comment %} <th scope="col" class="h2">IDJugador</th> {% endcomment %}
+      <th scope="col" class="h2">NombreTec</th>
+      <th scope="col" class="h2">ApellidoTec</th>
+      <th scope="col" class="h2">FecNacimiento</th>
+      <th scope="col" class="h2">Nacionalidad</th>
+      <th scope="col" class="h2">Rol</th>
+      <th scope="col" class="h2">Selección</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+
+  {% for t in tecnicos %}  
+    <tr>
+      {% comment %} <th scope="row" class="h3">{{ j.id_jugador }}</th> {% endcomment %}
+      <th scope="row" class="h3"><br>{{ t.nom_tec }}</th>
+      <td class="h3"><br>{{ t.apll_tec }}</td>
+      <td class="h3"><br>{{ t.fecha_nac_tec }}</td>
+      <td class="h3"><br>{{ t.nacionalidad_tec }}</td>
+      <td class="h3"><br>{{ t.rol_tec }}</td>
+      <td class="h3"><br>{{ t.id_equipo }}</td>
+
+    </tr>
+  {% endfor %}  
+        
+
+{% comment %}       <tr>
+      <th scope="row" class="h3">2</th>
+      <td class="h3">Jacob</td>
+      <td class="h3">Thornton</td>
+      <td class="h3">@fat</td>
+    </tr>
+    <tr>
+      <th scope="row" class="h3">3</th>
+      <td colspan="2" class="h3">Larry the Bird</td>
+      <td class="h3">@twitter</td>
+    </tr> {% endcomment %}
+  </tbody>
+</table>
+
+{% endblock %}
+
+
+{% block posicionescontent %}
+
+<table class="table border text-center">
+  <thead class="table-dark">
+    <tr class="col-md-6">
+      {% comment %} <th scope="col" class="h2">IDJugador</th> {% endcomment %}
+      <th scope="col" class="h2">IDPosición</th>
+      <th scope="col" class="h2">NombrePoición</th>
+      <th scope="col" class="h2">DescripcionPosición</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+
+  {% for p in posiciones %}  
+    <tr>
+      {% comment %} <th scope="row" class="h3">{{ j.id_jugador }}</th> {% endcomment %}
+      <th scope="row" class="h3"><br>{{ p.id_pos }}</th>
+      <td class="h3"><br>{{ p.nom_pos }}</td>
+      <td class="h3"><br>{{ p.des_pos }}</td>
+    </tr>
+  {% endfor %}  
+
+{% comment %}       <tr>
+      <th scope="row" class="h3">2</th>
+      <td class="h3">Jacob</td>
+      <td class="h3">Thornton</td>
+      <td class="h3">@fat</td>
+    </tr>
+    <tr>
+      <th scope="row" class="h3">3</th>
+      <td colspan="2" class="h3">Larry the Bird</td>
+      <td class="h3">@twitter</td>
+    </tr> {% endcomment %}
+  </tbody>
+</table>
+
+
+{% endblock %}
+
